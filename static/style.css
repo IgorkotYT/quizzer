@@ -1,0 +1,73 @@
+/* Dark?themed Admin UI */
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+#sidebar {
+    width: 30%;
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+    #sidebar input, #sidebar select {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        background: #222;
+        color: #fff;
+        border: 1px solid #169976;
+    }
+
+        #sidebar input:focus, #sidebar select:focus {
+            outline: 2px solid #1DCD9F;
+        }
+
+    #sidebar button {
+        width: 100%;
+        margin: 0.2rem 0;
+        padding: 0.5rem;
+        background: #1DCD9F;
+        border: none;
+        cursor: pointer;
+    }
+
+#preview {
+    width: 70%;
+    background: #fff;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/* Print style overrides */
+@media print {
+    #sidebar, #save-btn, #pdf-btn, #ans-btn {
+        display: none;
+    }
+
+    #preview {
+        width: 100%;
+    }
+
+    @page {
+        size: A4;
+        margin: 1cm;
+    }
+}
+
+/* Quiz styling within preview */
+.quiz-header {
+    border-bottom: 2px dotted #169976;
+    margin-bottom: 1rem;
+}
+
+.task-box {
+    background-image: linear-gradient(#eee 1px, transparent 1px), linear-gradient(90deg, #eee 1px, transparent 1px);
+    background-size: 20px 20px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}

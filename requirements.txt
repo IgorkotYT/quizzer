@@ -1,0 +1,2 @@
+﻿Flask>=2.0
+WeasyPrint>=53.0

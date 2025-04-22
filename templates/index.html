@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quiz Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- KaTeX CDN for math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <h2>Metadata</h2>
+            <label>Title<input type="text" id="title"></label>
+            <label>Student<input type="text" id="student" placeholder="Jan Kowalski"></label>
+            <label>Class<input type="text" id="class"></label>
+            <label>Date<input type="date" id="date"></label>
+            <label>
+                Type
+                <select id="type">
+                    <option>Kartkówka</option>
+                    <option>Sprawdzian</option>
+                </select>
+            </label>
+            <button id="save-btn">Save</button>
+            <button id="pdf-btn">Export PDF</button>
+            <button id="ans-btn">Export Answers</button>
+
+            <h2>Tasks</h2>
+            <ul id="task-list"></ul>
+            <button id="add-task">+ Add Task</button>
+
+            <h2>Grades</h2>
+            <div id="thresholds"></div>
+            <button id="add-grade">+ Add Grade</button>
+        </aside>
+
+        <main id="preview"></main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
